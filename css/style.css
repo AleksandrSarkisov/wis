@@ -1,0 +1,44 @@
+body{
+	padding-top: 70px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+nav{
+	font-weight: bold;
+}
+
+nav div ul, .pull-right ul{
+	display: inline-block;
+	padding: 0px 20px 0px 10px;
+}
+
+nav .pull-right{
+	display: inline-flex;
+	align-items: center;
+}
+
+nav .pull-right li{
+	font-weight: normal;
+}
+
+.description{
+	display: inline-flex;
+	flex-direction: column;
+	vertical-align: middle;
+}
+
+.basket{
+	display: inline-block;
+	margin: 0px 15px;
+}
+
+@media (min-width: 500px) and (max-width: 767px){
+	#main .row div{
+		width: 48%;
+		display: inline-block;
+		margin-top: 10px;
+	}
+}

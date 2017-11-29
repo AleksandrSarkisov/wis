@@ -1,0 +1,32 @@
+<div class="container" id="main">
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-lg-4 text-center" ng-repeat="iphone in iphones">
+				<img ng-src="{{iphone.img}}"><br>
+				<strong>{{iphone.name}}</strong><br>
+				<strong> {{iphone.price}} руб.</strong><br>
+				<button type="button" class="btn btn-default active" data-toggle="modal" data-target="#myModal" ng-click="select(iphone)"><i class="glyphicon glyphicon-shopping-cart"></i> В корзину</button>
+			</div>
+		</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+	    <div class="modal-content">
+	      	<div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel" style="text-align: center">Добавить в корзину</h4>
+		     </div>
+		    <div class="modal-body center-block">
+	        	<img ng-src="{{selectImage}}" alt="">
+	        	<div class="description">
+		        	<strong>{{selectName}}</strong><br>
+		        	<strong>Кол-во: &emsp; <input type="number" min="0" max="10" step="1" ng-model="selectQuantity" ></strong><br>
+		        	<strong>Сумма: <strong>&emsp; {{selectPrice}} руб.</strong> </strong>
+		      	</div>
+		    </div>
+		    <div class="modal-footer">
+		    	<button type="button" class="btn btn-success center-block" ng-click="add()" data-dismiss="modal">
+		    		<i class="glyphicon glyphicon-shopping-cart">&ensp;</i>
+		    	Добавить</button>
+		    </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->

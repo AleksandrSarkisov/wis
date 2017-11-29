@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="row">
+		<div ng-repeat="good in basket" class="basket">
+	        <img ng-src="{{good.img}}" alt="">
+	        <div class="pull-center">
+	            <ul>
+	                <li>Name: <strong>{{good.name}}</strong></li>
+	                <li>Quantity: <strong>{{good.quantity}}</strong></li>
+	                <li>Price: <strong>{{good.price}}</strong></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+</div>

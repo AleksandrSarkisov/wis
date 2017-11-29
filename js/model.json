@@ -1,0 +1,7 @@
+{
+	"items": [
+		{"name": "Apple Iphone 5s", "price": 30000, "img": "img/iphone.jpg"},
+		{"name": "Apple Iphone 6", "price": 40000, "img": "img/iphone.jpg"},
+		{"name": "Apple Iphone 6s", "price": 50000, "img": "img/iphone.jpg"}
+	]
+}

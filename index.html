@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="iphoneApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Main</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="fontAwesomeBootstrap/css/font-awesome.min.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/Iphone.js"></script>
+	
+</head>
+<body ng-controller="IphoneController">
+	<nav class="navbar-default navbar-fixed-top">
+		<div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		</div>
+		<div class="collapse navbar-collapse" id="mynavbar">
+			<ul class="nav navbar-nav menu">
+				<li><a ui-sref="main" ui-sref-activate="active">Главная</a></li>
+				<li><a ui-sref="basket" ui-sref-activate="active">Корзина</a></li>
+			</ul>
+
+			<ul class=" nav navbar-nav pull-right">
+				<li><i class="glyphicon glyphicon-shopping-cart fa-2x"></i></li>
+				<ul>
+					<li>В корзине <strong>{{quantity}} товаров</strong></li>
+					<li>На сумму <strong>{{sum}} руб</strong></li>
+				</ul>
+			</ul>
+		</div>
+	</nav>
+	
+	<ui-view>
+	</ui-view>
+</body>
+</html>
